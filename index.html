@@ -18,7 +18,7 @@
             max-width: 860px;
             margin: 0 auto;
             background: #fff;
-            padding: 60px 64px;
+            padding: 52px 60px;
         }
 
         /* HEADER */
@@ -26,52 +26,52 @@
             display: grid;
             grid-template-columns: auto 1fr auto;
             align-items: center;
-            gap: 28px;
-            padding-bottom: 24px;
-            border-bottom: 2.5px solid #111;
-            margin-bottom: 36px;
+            gap: 24px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #111;
+            margin-bottom: 28px;
         }
         .hdr-photo {
-            width: 88px;
-            height: 88px;
+            width: 84px;
+            height: 84px;
             border-radius: 50%;
             object-fit: cover;
-            border: 2px solid #e0e0e0;
+            border: 2px solid #ddd;
             flex-shrink: 0;
         }
         .hdr-photo-placeholder {
-            width: 88px;
-            height: 88px;
+            width: 84px;
+            height: 84px;
             border-radius: 50%;
             background: #f0f0f0;
-            border: 2px solid #e0e0e0;
+            border: 2px solid #ddd;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 28px;
+            font-size: 26px;
             font-weight: 900;
             color: #bbb;
             flex-shrink: 0;
         }
-        .hdr-center {}
         .hdr-name {
-            font-size: 40px;
+            font-size: 42px;
             font-weight: 900;
-            letter-spacing: -2px;
+            letter-spacing: -2.5px;
             line-height: 1;
-            margin-bottom: 8px;
+            margin-bottom: 7px;
         }
         .hdr-sub {
             font-size: 12px;
-            color: #555;
-            line-height: 1.7;
-            max-width: 400px;
+            color: #444;
+            line-height: 1.65;
+            max-width: 420px;
+            font-weight: 500;
         }
         .hdr-info {
             text-align: right;
             font-size: 11.5px;
             color: #555;
-            line-height: 2.1;
+            line-height: 2;
         }
         .hdr-info a {
             color: #555;
@@ -82,98 +82,103 @@
         .hdr-info a:hover { color: #111; }
 
         /* SECTION */
-        .sec { margin-bottom: 32px; }
+        .sec { margin-bottom: 26px; }
         .sec-title {
-            font-size: 10.5px;
-            font-weight: 700;
+            font-size: 11px;
+            font-weight: 900;
             letter-spacing: 3px;
             text-transform: uppercase;
-            color: #999;
-            margin-bottom: 14px;
-            padding-bottom: 7px;
-            border-bottom: 1px solid #e8e8e8;
+            color: #111;
+            margin-bottom: 12px;
+            padding-bottom: 6px;
+            border-bottom: 2px solid #111;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
         /* 자기소개 */
         .intro-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
+            gap: 8px;
         }
         .ic {
-            background: #f5f5f5;
-            padding: 14px 15px;
+            background: #f8f8f8;
+            padding: 13px 14px;
             border-radius: 2px;
+            border: 1px solid #e8e8e8;
         }
         .ic-lbl {
-            font-size: 10px;
+            font-size: 9.5px;
             font-weight: 700;
             letter-spacing: 2px;
             text-transform: uppercase;
-            color: #aaa;
+            color: #888;
             margin-bottom: 5px;
         }
-        .ic-txt { font-size: 12px; color: #333; line-height: 1.6; }
+        .ic-txt { font-size: 11.5px; color: #333; line-height: 1.6; }
 
         /* 2단 */
-        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 
         /* 학력 */
         .edu-tbl { width: 100%; border-collapse: collapse; }
         .edu-tbl tr { border-bottom: 1px solid #f0f0f0; }
         .edu-tbl tr:last-child { border-bottom: none; }
-        .edu-tbl td { padding: 7px 0; vertical-align: top; font-size: 12.5px; }
+        .edu-tbl td { padding: 6px 0; vertical-align: top; font-size: 12.5px; }
         .edu-tbl td:first-child {
-            color: #aaa;
+            color: #999;
             font-family: 'JetBrains Mono', monospace;
             font-size: 10.5px;
             width: 130px;
-            padding-top: 9px;
+            padding-top: 8px;
         }
-        .edu-tbl td:nth-child(2) { font-weight: 700; color: #222; padding-right: 8px; }
+        .edu-tbl td:nth-child(2) { font-weight: 900; color: #111; padding-right: 8px; }
         .edu-tbl td:nth-child(3) { color: #555; }
         .edu-tbl td:last-child { color: #bbb; text-align: right; }
 
         /* 기술 스택 */
         .skl-tbl { width: 100%; border-collapse: collapse; }
-        .skl-tbl tr { border-bottom: 1px solid #eee; }
+        .skl-tbl tr { border-bottom: 1px solid #f0f0f0; }
         .skl-tbl tr:last-child { border-bottom: none; }
-        .skl-tbl td { padding: 8px 0; vertical-align: top; }
+        .skl-tbl td { padding: 7px 0; vertical-align: top; }
         .skl-cat {
-            font-size: 10.5px;
-            font-weight: 700;
-            color: #aaa;
+            font-size: 10px;
+            font-weight: 900;
+            color: #111;
             letter-spacing: 1px;
             text-transform: uppercase;
             width: 110px;
             padding-right: 12px;
-            padding-top: 10px;
+            padding-top: 9px;
         }
         .skl-tech {
             font-family: 'JetBrains Mono', monospace;
             font-size: 11.5px;
-            color: #222;
+            color: #111;
             width: 200px;
             padding-right: 12px;
-            font-weight: 600;
+            font-weight: 700;
         }
         .skl-desc { font-size: 12px; color: #555; line-height: 1.6; }
 
         /* AI 섹션 */
         .ai-text {
             font-size: 12.5px;
-            color: #333;
+            color: #222;
             line-height: 1.9;
-            background: #f5f5f5;
-            padding: 18px 20px;
+            background: #f8f8f8;
+            padding: 16px 18px;
             border-radius: 2px;
-            border-left: 3px solid #111;
+            border-left: 4px solid #111;
+            font-weight: 400;
         }
 
         /* 프로젝트 */
         .proj {
-            margin-bottom: 22px;
-            padding-bottom: 22px;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
             border-bottom: 1px solid #eee;
         }
         .proj:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
@@ -182,47 +187,74 @@
             grid-template-columns: auto 1fr auto;
             align-items: center;
             margin-bottom: 4px;
-            gap: 12px;
+            gap: 10px;
         }
         .proj-img {
-            width: 36px;
-            height: 36px;
+            width: 32px;
+            height: 32px;
             border-radius: 50%;
             object-fit: cover;
             border: 1px solid #e0e0e0;
             flex-shrink: 0;
         }
-        .proj-name { font-size: 14px; font-weight: 700; color: #111; }
-        .proj-date { font-size: 11px; color: #999; font-family: 'JetBrains Mono', monospace; }
-        .proj-role { font-size: 11.5px; color: #777; margin-bottom: 8px; line-height: 1.6; }
-        .tag-bar { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 8px; }
+        .proj-name {
+            font-size: 15px;
+            font-weight: 900;
+            color: #111;
+            letter-spacing: -0.5px;
+        }
+        .proj-date {
+            font-size: 11px;
+            color: #999;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .proj-role { font-size: 11.5px; color: #666; margin-bottom: 8px; line-height: 1.6; }
+        .tag-bar { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 8px; }
         .tag {
             font-family: 'JetBrains Mono', monospace;
-            font-size: 10px;
-            color: #555;
+            font-size: 9.5px;
+            color: #111;
             background: #f0f0f0;
             padding: 2px 8px;
             border-radius: 2px;
+            font-weight: 600;
         }
         .proj-ul { list-style: none; padding: 0; }
         .proj-ul li {
-            font-size: 12px;
-            color: #444;
+            font-size: 12.5px;
+            color: #333;
             padding: 3px 0 3px 14px;
             position: relative;
             line-height: 1.6;
         }
-        .proj-ul li::before { content: '·'; position: absolute; left: 0; color: #bbb; }
-        .proj-ul li strong { font-weight: 700; color: #222; }
+        .proj-ul li::before { content: '—'; position: absolute; left: 0; color: #bbb; font-size: 10px; top: 5px; }
+        .proj-ul li strong {
+            font-weight: 900;
+            color: #111;
+            background: #f5f5f5;
+            padding: 0 3px;
+            border-radius: 2px;
+        }
         .proj-link {
             font-family: 'JetBrains Mono', monospace;
             font-size: 10.5px;
-            color: #777;
+            color: #888;
             text-decoration: none;
             margin-top: 6px;
             display: inline-block;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 1px;
         }
-        .proj-link:hover { color: #111; }
+        .proj-link:hover { color: #111; border-color: #111; }
+
+        /* 수치 강조 */
+        .highlight {
+            font-weight: 900;
+            color: #111;
+            background: #f5f5f5;
+            padding: 0 3px;
+            border-radius: 2px;
+        }
     </style>
 </head>
 <body>
@@ -231,12 +263,10 @@
     <!-- HEADER -->
     <div class="hdr">
         <img class="hdr-photo" src="1581304118739.jpg" alt="윤민기">
-
-        <div class="hdr-center">
+        <div>
             <div class="hdr-name">윤민기</div>
             <div class="hdr-sub">새로운 기술을 빠르게 흡수해 실제 서비스에 녹여내는 것을 즐기며,<br>Tool Calling·RAG 기반 AI 기능을 직접 설계·구현한 Java 백엔드 개발자</div>
         </div>
-
         <div class="hdr-info">
             <div>010-6730-7747</div>
             <div><a href="mailto:minky5004@gmail.com">minky5004@gmail.com</a></div>
@@ -288,7 +318,7 @@
             <div class="sec-title">교육 이력</div>
             <table class="edu-tbl">
                 <tr>
-                    <td>25.11 — 26.05</td>
+                    <td>2025.11 — 2026.05</td>
                     <td>내일배움캠프</td>
                     <td>Spring 백엔드 트랙</td>
                     <td></td>
@@ -357,14 +387,14 @@
             <div class="proj-hdr">
                 <img class="proj-img" src="Gigachal.png" alt="GigaMak">
                 <div class="proj-name">실시간 역경매 서비스</div>
-                <div class="proj-date">2026.04 — 2026.05 · 5주</div>
+                <div class="proj-date">2026.04 — 2026.05 · 6주</div>
             </div>
             <div class="proj-role">구매자가 원하는 물품을 등록하면 판매자들이 경쟁적으로 가격을 낮춰 입찰하는 역경매 플랫폼 · 4인 팀 · AI 상담 챗봇(Tool Calling·RAG) 설계·구현, 모니터링 구축, 리뷰 이미지·임베딩 연동, 인프라 보조</div>
             <div class="tag-bar">
                 <span class="tag">Java 21</span><span class="tag">Spring Boot</span><span class="tag">Spring AI</span><span class="tag">PostgreSQL</span><span class="tag">Redis</span><span class="tag">Elasticsearch</span><span class="tag">AWS ECS·Lambda·SQS·S3</span><span class="tag">WebSocket</span><span class="tag">SSE</span><span class="tag">Docker</span><span class="tag">GitHub Actions</span><span class="tag">Prometheus</span><span class="tag">Grafana</span><span class="tag">K6</span>
             </div>
             <ul class="proj-ul">
-                <li><strong>HyDE + score 필터</strong>로 RAG Precision@3 0.83 → 1.00 개선</li>
+                <li><strong>HyDE + score 필터</strong>로 RAG Precision@3 <span class="highlight">0.83 → 1.00</span> 개선</li>
                 <li><strong>SSE 기반 GPT 응답 스트리밍</strong> 구현으로 첫 토큰부터 실시간 응답 제공</li>
                 <li><strong>Prometheus·Grafana</strong> 모니터링 대시보드 구축</li>
             </ul>
