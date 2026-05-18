@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>윤민기 이력서</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background: #fafafa;
+            color: #0a0a0a;
+            font-size: 13px;
+            line-height: 1.7;
+        }
+        .page {
+            max-width: 860px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 60px 64px;
+        }
+
+        /* HEADER */
+        .hdr {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            align-items: center;
+            gap: 28px;
+            padding-bottom: 24px;
+            border-bottom: 2.5px solid #111;
+            margin-bottom: 36px;
+        }
+        .hdr-photo {
+            width: 88px;
+            height: 88px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #e0e0e0;
+            flex-shrink: 0;
+        }
+        .hdr-photo-placeholder {
+            width: 88px;
+            height: 88px;
+            border-radius: 50%;
+            background: #f0f0f0;
+            border: 2px solid #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-weight: 900;
+            color: #bbb;
+            flex-shrink: 0;
+        }
+        .hdr-center {}
+        .hdr-name {
+            font-size: 40px;
+            font-weight: 900;
+            letter-spacing: -2px;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+        .hdr-sub {
+            font-size: 12px;
+            color: #555;
+            line-height: 1.7;
+            max-width: 400px;
+        }
+        .hdr-info {
+            text-align: right;
+            font-size: 11.5px;
+            color: #555;
+            line-height: 2.1;
+        }
+        .hdr-info a {
+            color: #555;
+            text-decoration: none;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+        }
+        .hdr-info a:hover { color: #111; }
+
+        /* SECTION */
+        .sec { margin-bottom: 32px; }
+        .sec-title {
+            font-size: 10.5px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #999;
+            margin-bottom: 14px;
+            padding-bottom: 7px;
+            border-bottom: 1px solid #e8e8e8;
+        }
+
+        /* 자기소개 */
+        .intro-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+        .ic {
+            background: #f5f5f5;
+            padding: 14px 15px;
+            border-radius: 2px;
+        }
+        .ic-lbl {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #aaa;
+            margin-bottom: 5px;
+        }
+        .ic-txt { font-size: 12px; color: #333; line-height: 1.6; }
+
+        /* 2단 */
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+
+        /* 학력 */
+        .edu-tbl { width: 100%; border-collapse: collapse; }
+        .edu-tbl tr { border-bottom: 1px solid #f0f0f0; }
+        .edu-tbl tr:last-child { border-bottom: none; }
+        .edu-tbl td { padding: 7px 0; vertical-align: top; font-size: 12.5px; }
+        .edu-tbl td:first-child {
+            color: #aaa;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10.5px;
+            width: 130px;
+            padding-top: 9px;
+        }
+        .edu-tbl td:nth-child(2) { font-weight: 700; color: #222; padding-right: 8px; }
+        .edu-tbl td:nth-child(3) { color: #555; }
+        .edu-tbl td:last-child { color: #bbb; text-align: right; }
+
+        /* 기술 스택 */
+        .skl-tbl { width: 100%; border-collapse: collapse; }
+        .skl-tbl tr { border-bottom: 1px solid #eee; }
+        .skl-tbl tr:last-child { border-bottom: none; }
+        .skl-tbl td { padding: 8px 0; vertical-align: top; }
+        .skl-cat {
+            font-size: 10.5px;
+            font-weight: 700;
+            color: #aaa;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            width: 110px;
+            padding-right: 12px;
+            padding-top: 10px;
+        }
+        .skl-tech {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11.5px;
+            color: #222;
+            width: 200px;
+            padding-right: 12px;
+            font-weight: 600;
+        }
+        .skl-desc { font-size: 12px; color: #555; line-height: 1.6; }
+
+        /* AI 섹션 */
+        .ai-text {
+            font-size: 12.5px;
+            color: #333;
+            line-height: 1.9;
+            background: #f5f5f5;
+            padding: 18px 20px;
+            border-radius: 2px;
+            border-left: 3px solid #111;
+        }
+
+        /* 프로젝트 */
+        .proj {
+            margin-bottom: 22px;
+            padding-bottom: 22px;
+            border-bottom: 1px solid #eee;
+        }
+        .proj:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+        .proj-hdr {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            align-items: center;
+            margin-bottom: 4px;
+            gap: 12px;
+        }
+        .proj-img {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 1px solid #e0e0e0;
+            flex-shrink: 0;
+        }
+        .proj-name { font-size: 14px; font-weight: 700; color: #111; }
+        .proj-date { font-size: 11px; color: #999; font-family: 'JetBrains Mono', monospace; }
+        .proj-role { font-size: 11.5px; color: #777; margin-bottom: 8px; line-height: 1.6; }
+        .tag-bar { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 8px; }
+        .tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10px;
+            color: #555;
+            background: #f0f0f0;
+            padding: 2px 8px;
+            border-radius: 2px;
+        }
+        .proj-ul { list-style: none; padding: 0; }
+        .proj-ul li {
+            font-size: 12px;
+            color: #444;
+            padding: 3px 0 3px 14px;
+            position: relative;
+            line-height: 1.6;
+        }
+        .proj-ul li::before { content: '·'; position: absolute; left: 0; color: #bbb; }
+        .proj-ul li strong { font-weight: 700; color: #222; }
+        .proj-link {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10.5px;
+            color: #777;
+            text-decoration: none;
+            margin-top: 6px;
+            display: inline-block;
+        }
+        .proj-link:hover { color: #111; }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- HEADER -->
+    <div class="hdr">
+        <img class="hdr-photo" src="1581304118739.jpg" alt="윤민기">
+
+        <div class="hdr-center">
+            <div class="hdr-name">윤민기</div>
+            <div class="hdr-sub">새로운 기술을 빠르게 흡수해 실제 서비스에 녹여내는 것을 즐기며,<br>Tool Calling·RAG 기반 AI 기능을 직접 설계·구현한 Java 백엔드 개발자</div>
+        </div>
+
+        <div class="hdr-info">
+            <div>010-6730-7747</div>
+            <div><a href="mailto:minky5004@gmail.com">minky5004@gmail.com</a></div>
+            <div><a href="https://github.com/minky5004" target="_blank">github.com/minky5004</a></div>
+            <div><a href="https://velog.io/@minky5004/posts" target="_blank">velog.io/@minky5004</a></div>
+            <div>충청남도 천안시 두정동</div>
+        </div>
+    </div>
+
+    <!-- 자기소개 -->
+    <div class="sec">
+        <div class="sec-title">한 줄 자기소개 — 지원 회사별</div>
+        <div class="intro-grid">
+            <div class="ic">
+                <div class="ic-lbl">CJ ENM</div>
+                <div class="ic-txt">새로운 기술을 빠르게 흡수해 실제 서비스에 녹여내는 것을 즐기며, AI 챗봇과 실시간 스트리밍을 직접 구현한 경험을 가진 Java 백엔드 개발자</div>
+            </div>
+            <div class="ic">
+                <div class="ic-lbl">카카오뱅크</div>
+                <div class="ic-txt">문제의 원인을 끝까지 파고드는 것을 즐기며, 깊이 있는 기술적 도전을 통해 안정적인 시스템을 만들어가는 Java 백엔드 개발자</div>
+            </div>
+            <div class="ic">
+                <div class="ic-lbl">페이타랩</div>
+                <div class="ic-txt">새로운 기술을 적극적으로 탐색하고 실무에 빠르게 적용하는 것을 즐기며, AI-First 개발 문화에서 함께 성장해가는 Java 백엔드 개발자</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 학력 + 교육 -->
+    <div class="two-col">
+        <div class="sec">
+            <div class="sec-title">학력</div>
+            <table class="edu-tbl">
+                <tr>
+                    <td>2021.03 — 2025.09</td>
+                    <td>공주대학교</td>
+                    <td>컴퓨터공학과</td>
+                    <td>휴학</td>
+                </tr>
+                <tr>
+                    <td>2018.03 — 2021.03</td>
+                    <td>의성고등학교</td>
+                    <td>—</td>
+                    <td>졸업</td>
+                </tr>
+            </table>
+        </div>
+        <div class="sec">
+            <div class="sec-title">교육 이력</div>
+            <table class="edu-tbl">
+                <tr>
+                    <td>25.11 — 26.05</td>
+                    <td>내일배움캠프</td>
+                    <td>Spring 백엔드 트랙</td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- 기술 스택 -->
+    <div class="sec">
+        <div class="sec-title">기술 스택</div>
+        <table class="skl-tbl">
+            <tr>
+                <td class="skl-cat">Language</td>
+                <td class="skl-tech">Java 21</td>
+                <td class="skl-desc">객체지향 설계, 핵심 비즈니스 로직 구현</td>
+            </tr>
+            <tr>
+                <td class="skl-cat">Framework</td>
+                <td class="skl-tech">Spring Boot<br>Spring Security<br>Spring AI</td>
+                <td class="skl-desc">REST API 설계<br>JWT 인증·인가<br>LLM Tool Calling·RAG 연동</td>
+            </tr>
+            <tr>
+                <td class="skl-cat">Database</td>
+                <td class="skl-tech">PostgreSQL<br>Redis<br>Elasticsearch</td>
+                <td class="skl-desc">도메인 모델링<br>분산락·캐싱<br>한국어 형태소 검색(Nori)</td>
+            </tr>
+            <tr>
+                <td class="skl-cat">ORM / Query</td>
+                <td class="skl-tech">JPA, QueryDSL</td>
+                <td class="skl-desc">도메인 모델링, 타입 안전 동적 쿼리</td>
+            </tr>
+            <tr>
+                <td class="skl-cat">AI / Vector</td>
+                <td class="skl-tech">Spring AI<br>OpenAI API<br>pgvector</td>
+                <td class="skl-desc">Tool Calling·RAG 파이프라인 구현<br>시맨틱 검색, 임베딩 자동 연동</td>
+            </tr>
+            <tr>
+                <td class="skl-cat">Infra / DevOps</td>
+                <td class="skl-tech">AWS (ECS·RDS·S3<br>Lambda·SQS)<br>Docker, GitHub Actions</td>
+                <td class="skl-desc">무중단 배포·CI/CD 파이프라인 구축<br>이벤트 기반 스케줄링</td>
+            </tr>
+            <tr>
+                <td class="skl-cat">Monitoring</td>
+                <td class="skl-tech">Prometheus<br>Grafana, K6</td>
+                <td class="skl-desc">대시보드 구성, 부하테스트 시나리오 설계</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- AI 활용 능력 -->
+    <div class="sec">
+        <div class="sec-title">AI 활용 능력</div>
+        <div class="ai-text">
+            단순히 AI에게 코드를 생성시키는 것을 넘어, AI가 프로젝트 컨텍스트에서 벗어나지 않도록 하네스를 직접 설계하고 운용한다.<br><br>
+            프로젝트 루트에 에이전트 규칙 파일을 작성해 기술 스택·코딩 컨벤션·금지 규칙을 정의하고, AI 코딩 에이전트가 매 세션마다 이를 컨텍스트로 주입받아 일관된 코드를 생성하도록 구성했다. PR 파이프라인에 AI 리뷰 도구를 통합해 1차 리뷰를 자동화하고, 제안 수용·기각 근거를 코멘트로 문서화해 하네스를 지속적으로 개선했다.<br><br>
+            AI가 실수한 지점은 규칙으로 전환해 에이전트 설정 파일에 반영하는 방식으로 하네스를 반복 보강하며, 팀원이 바뀌어도 동일한 품질의 코드가 나오는 환경을 구축하는 것을 개발 원칙으로 삼는다.
+        </div>
+    </div>
+
+    <!-- 프로젝트 -->
+    <div class="sec">
+        <div class="sec-title">프로젝트</div>
+
+        <div class="proj">
+            <div class="proj-hdr">
+                <img class="proj-img" src="Gigachal.png" alt="GigaMak">
+                <div class="proj-name">실시간 역경매 서비스</div>
+                <div class="proj-date">2026.04 — 2026.05 · 5주</div>
+            </div>
+            <div class="proj-role">구매자가 원하는 물품을 등록하면 판매자들이 경쟁적으로 가격을 낮춰 입찰하는 역경매 플랫폼 · 4인 팀 · AI 상담 챗봇(Tool Calling·RAG) 설계·구현, 모니터링 구축, 리뷰 이미지·임베딩 연동, 인프라 보조</div>
+            <div class="tag-bar">
+                <span class="tag">Java 21</span><span class="tag">Spring Boot</span><span class="tag">Spring AI</span><span class="tag">PostgreSQL</span><span class="tag">Redis</span><span class="tag">Elasticsearch</span><span class="tag">AWS ECS·Lambda·SQS·S3</span><span class="tag">WebSocket</span><span class="tag">SSE</span><span class="tag">Docker</span><span class="tag">GitHub Actions</span><span class="tag">Prometheus</span><span class="tag">Grafana</span><span class="tag">K6</span>
+            </div>
+            <ul class="proj-ul">
+                <li><strong>HyDE + score 필터</strong>로 RAG Precision@3 0.83 → 1.00 개선</li>
+                <li><strong>SSE 기반 GPT 응답 스트리밍</strong> 구현으로 첫 토큰부터 실시간 응답 제공</li>
+                <li><strong>Prometheus·Grafana</strong> 모니터링 대시보드 구축</li>
+            </ul>
+            <a class="proj-link" href="https://github.com/GigaMak2" target="_blank">github.com/GigaMak2 ↗</a>
+        </div>
+
+        <div class="proj">
+            <div class="proj-hdr">
+                <img class="proj-img" src="JARVIS.jpg" alt="JARVIS">
+                <div class="proj-name">J.A.R.V.I.S</div>
+                <div class="proj-date">2026.05 · 개인 프로젝트</div>
+            </div>
+            <div class="proj-role">음성 명령을 이해하고 Tool Calling으로 기능을 자동 실행하는 AI 어시스턴트 백엔드 서비스 · 전체 설계·구현 (STT 파이프라인, Tool Calling, 외부 API 연동)</div>
+            <div class="tag-bar">
+                <span class="tag">Java 21</span><span class="tag">Spring Boot</span><span class="tag">Spring AI</span><span class="tag">OpenAI GPT</span><span class="tag">Whisper API</span><span class="tag">Google Calendar API</span><span class="tag">Open-Meteo API</span>
+            </div>
+            <ul class="proj-ul">
+                <li><strong>Whisper STT → GPT Tool Calling → 외부 API</strong> 자동 실행 파이프라인 구축</li>
+                <li>한국어 자연어 명령으로 날씨·일정·검색 기능 자동 실행 구현</li>
+            </ul>
+            <a class="proj-link" href="https://github.com/minky5004/J.A.R.V.I.S" target="_blank">github.com/minky5004/J.A.R.V.I.S ↗</a>
+        </div>
+
+    </div>
+
+</div>
+</body>
+</html>
